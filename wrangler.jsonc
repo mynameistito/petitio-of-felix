@@ -1,0 +1,24 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "petition-of-felix",
+  "main": "src/index.ts",
+  "account_id": "402722ab1f598e783cd6dcdedc37e1d0",
+  "compatibility_date": "2026-07-14",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "triggers": {
+    "crons": ["* * * * *"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "petition-of-felix-pulse",
+      "database_id": "2816befd-8025-4f34-9052-ff1bc4f8dda6",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
